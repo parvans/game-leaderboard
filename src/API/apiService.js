@@ -1,5 +1,5 @@
 //  ******************** Base URL ***********************
-let baseUrl = "http://localhost:5000/api";
+let baseUrl = "https://game-leaderboard-api.vercel.app/api";
 //  ******************** Token ***********************
 var token = localStorage.getItem('user-token');
 
