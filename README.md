@@ -6,6 +6,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Login Details
+
+### User Login
+Email: amal@gmail.com \
+Password: A@123123
+### Admin Login
+Email: parvan@gmail.com \
+Password: P@123123
+
 ### `npm start`
 
 Runs the app in the development mode.\
