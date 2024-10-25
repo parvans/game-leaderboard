@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Game Leaderboard System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Demo
+
+You can view the live demo of the project [here](https://game-leaderboard.vercel.app/).
 
 ## Available Scripts
 
