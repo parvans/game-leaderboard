@@ -20,7 +20,7 @@ input{
 
 }
 
-button{
+button.loginBtn{
     cursor: pointer;
     width: 100%;
     display: block;

@@ -10,6 +10,16 @@ export default function IndexPage() {
   const [search,setSearch]=useState('');
   const [players,setPlayers]=useState([]);
   const [loading,setLoading]=useState(false);
+  const [open, setOpen] = useState(false);
+  const [isUpdated,setIsUpdated]=useState(false)
+
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   
   const handleSearch=async(value)=>{
@@ -35,12 +45,12 @@ export default function IndexPage() {
   }
 
   useEffect(()=>{
-    // const timer=setTimeout(()=>{
-    // },4000);
     handleSearch(search);
+    // console.log("Updatedd");
+    
+  },[search,isUpdated])
 
-    // return ()=>clearTimeout(timer);
-  },[search])
+ 
 
   return (
    <div className="leaderboard">
@@ -65,7 +75,14 @@ export default function IndexPage() {
 
     {
       players.length!==0 ?(
-        <CustomTable playerData={players}/>
+        <CustomTable
+          setIsUpdated={setIsUpdated}
+          isUpdated={isUpdated}
+          playerData={players} 
+          handleClose={handleClose} 
+          handleOpen={handleOpen} 
+          open={open}
+        />
       ):loading?(
         <Backdrop
           sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}

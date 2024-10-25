@@ -54,7 +54,7 @@ export default function LoginPage() {
             onChange={(e)=>setPassword(e.target.value)} onKeyDown={handleKeypress} />
             {password.length>0 &&<i className={`fas ${showPassword ? 'fa-eye-slash' : 'fa-eye'}`} onClick={() => setShowPassword(!showPassword)}></i>}
             </div>
-            <button type='submit' onClick={handleLogin}>Login</button>
+            <button className='loginBtn' type='submit' onClick={handleLogin}>Login</button>
             
         </form>
         <Toaster
