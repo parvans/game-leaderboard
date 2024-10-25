@@ -24,7 +24,7 @@ export default function Header() {
 
     const logOut=()=>{
         localStorage.clear();
-        setUserInfo(null);
+        setUserInfo(null)
         navigate("/login")
     }
 
