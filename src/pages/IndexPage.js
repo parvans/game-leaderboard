@@ -6,12 +6,18 @@ import { useEffect, useState } from 'react';
 import { getPlayers } from '../API/apiService';
 import CustomTable from '../components/Table/CustomTable';
 import nodata from '../assets/images/nodata.jpg';
+import useDebounce from '../hooks/useDebounce';
 export default function IndexPage() {
   const [search,setSearch]=useState('');
   const [players,setPlayers]=useState([]);
   const [loading,setLoading]=useState(false);
   const [open, setOpen] = useState(false);
   const [isUpdated,setIsUpdated]=useState(false)
+
+  //debounce
+  const debouncedSearchValue=useDebounce(search,1000)
+  // console.log(debouncedSearchValue);
+  
 
 
   const handleOpen = () => {
@@ -45,10 +51,9 @@ export default function IndexPage() {
   }
 
   useEffect(()=>{
-    handleSearch(search);
-    // console.log("Updatedd");
+    handleSearch(debouncedSearchValue);
     
-  },[search,isUpdated])
+  },[debouncedSearchValue,isUpdated])
 
  
 
