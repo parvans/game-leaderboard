@@ -1,10 +1,21 @@
-# Getting Started with Create React App
+# Game Leaderboard System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Demo
+
+You can view the live demo of the project [here](https://game-leaderboard.vercel.app/).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+## Login Details
+
+### User Login
+Email: amal@gmail.com \
+Password: A@123123
+### Admin Login
+Email: parvan@gmail.com \
+Password: P@123123
 
 ### `npm start`
 
